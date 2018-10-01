@@ -1,15 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
 import {Products} from '../../products';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements AfterViewInit {
 @Input() productdata:Products[];
-  constructor() { }
-
-  ngOnInit() {
+date:Date;
+  constructor() {
+      this.date = new Date();
+      
+     //console.log(this.productdata);
+   }
+  
+  
+  ngAfterViewInit(){
+    
   }
 
 }
