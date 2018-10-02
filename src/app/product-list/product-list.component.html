@@ -7,8 +7,8 @@
           <input type="text" class="form-control" placeholder="Filter by:" aria-label="Filter by:" aria-describedby="basic-addon1">
         </div>
         <h5 class="card-text">Filtered by:</h5>
-      <div class='table-responsive'>
-          <table *ngIf="productdata" class='table'>
+      <div *ngIf="productdata" class='table-responsive'>
+          <table class='table'>
               <thead>
                   <tr>
                       <th>
@@ -28,6 +28,8 @@
                    <th><img src="{{i.imageUrl}}" alt="no img found" width=40 height=40></th>
                    <th>{{i.productName}}</th>
                    <th>{{i.productCode}}</th>
+                   <th>yes</th>
+                   <th>{{i.price}}</th>
                  </tr>
               </tbody>
           </table>

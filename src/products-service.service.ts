@@ -3,7 +3,6 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Products } from './products';
 import { Observable } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +14,7 @@ url:string = "../products.json";
     try {
       return this.HTTP.get<Products[]>(this.url)
     } catch (error) {
-      console.log(error);
+      console.log(error); 
     }
     
   

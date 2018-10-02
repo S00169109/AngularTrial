@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Output, EventEmitter } from '@angular/core';
 import {ProductsServiceService} from '../products-service.service';
 import { Products } from '../products';
 @Component({
