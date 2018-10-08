@@ -8,13 +8,10 @@ import {Products} from '../../products';
 export class ProductListComponent implements OnChanges {
 @Input() productdata:Products[];
 @Output() dataREC:EventEmitter<boolean>;
-check:string;
-date:Date;
-datecomparecheck:boolean;
+
   constructor() {
-      this.date = new Date();
-      this.check=this.date.toDateString();
-     console.log(this.check);
+      
+     
    }
   datecheck():void{
    /*  console.log(this.productdata);
@@ -33,15 +30,6 @@ datecomparecheck:boolean;
     
   }
   ngOnChanges(){
-    if (this.productdata) {
-      this.productdata.forEach(element => {
-        
-        // console.log( this.date.toString(),element.releaseDate );
-         if (element.releaseDate.toString() <= this.date.toDateString()) {
-          console.log(element.releaseDate);
-        }
-     });
-    }
     
   }
 

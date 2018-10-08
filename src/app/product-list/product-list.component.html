@@ -25,11 +25,12 @@
               </thead>
               <tbody>
                  <tr *ngFor="let i of productdata">
-                   <th><img src="{{i.imageUrl}}" alt="no img found" width=40 height=40></th>
-                   <th>{{i.productName}}</th>
-                   <th>{{i.productCode}}</th>
-                   <th>yes</th>
-                   <th>{{i.price}}</th>
+                   <td><img src="{{i.imageUrl}}" alt="no img found" width=40 height=40></td>
+                   <td>{{i.productName}}</td>
+                   <td>{{i.productCode | convertToSpace:'-'}}</td>
+                   <td>{{i.releaseDate}}</td>
+                   <td>{{i.price}}</td>
+                   <TD>{{i.starRating}}</TD>
                  </tr>
               </tbody>
           </table>
